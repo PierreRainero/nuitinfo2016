@@ -5,18 +5,44 @@
 (function($) {
     $(document).ready(function(){
 
-        var perso = new Object();
-        perso.xDecalage = 0;
-        perso.yDecalage = 0;
+        var etapes = 0;
 
-        function init(){
+        function controleurHistoire(){
+            switch(etapes){
+                case 0:
+                    defiler();
+                    etapes++;
+                    break;
+
+                case 1:
+                    saut();
+                    etapes++;
+                    break;
+
+                case 2:
+                    defiler();
+                    etapes++;
+                    break;
+
+                case 3:
+                    if(nbPourBreak==0)
+                        effacerElementDynamique();
+                    else
+                        modifieElementDynamique();
+                    break;
+
+                case 4:
+                    defiler();
+                    etapes++;
+                    break;
+
+                case 5:
+                    takePiece();
+                    etapes=0;
+                    break;
+            }
 
         }
-
-        function sautX(){
-
-        }
-
 
         var Instructions = ["instru1", "instru2", "instru3"];
         var i=0, l=Instructions.length;
@@ -28,7 +54,7 @@
             }
         })
 
-        function défiler(){
+        function defiler(){
             $("#fond").animate({"left": "-=10%"}, 750);
         }
 
