@@ -52,6 +52,7 @@
         function bougerBonhomme() {
             $("#personnage").animate({top:'5%'}, 100);
 
+
         }
     });
 })(jQuery);
