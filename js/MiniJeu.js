@@ -47,7 +47,8 @@
         var Instructions = ["instru1", "instru2", "instru3"];
         var i=0, l=Instructions.length;
 
-        $("#repondre").click(function () {
+        $("#reponse1").click(function () {
+            saut();
             if (i < Instructions.length) {
                 document.getElementById("instructions").innerHTML = Instructions[i];
                 i++;
@@ -60,10 +61,8 @@
 
 
         function saut() {
-            $("#personnage").animate({"top": "+=50px"}, 750);
-            $("#fond").animate({"left": "-=10%"}, 750);
-
-            $("#personnage").animate({"top": "-=50px"}, 750).delay(750);
+            $("#personnage").animate({top: "-=20%"}, 750).delay(50).animate({top: "+=20%"}, 750);
+            $("#fond").delay(125).animate({left: "-=10%"}, 750);
         }
 
         function popNouveauDynamique(){
