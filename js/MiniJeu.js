@@ -28,16 +28,20 @@
             }
         })
 
-        function bougerMapGauche(){
-            $("#fond").animate({"left": "-=10%"}, "slow");
+        function défiler(){
+            $("#fond").animate({"left": "-=10%"}, 750);
         }
 
-        function bougerMapDroite() {
-            $("#fond").animate({"right": "-=10%"}, "slow");
+
+        function saut() {
+            $("#personnage").animate({"top": "+=50px"}, 750);
+            $("#fond").animate({"left": "-=10%"}, 750);
+
+            $("#personnage").animate({"top": "-=50px"}, 750).delay(750);
         }
 
-        function bonhommeSautant() {
-            $("#personnage").animate({"top": "+=50px"}, "slow");
+        function popNouveauDynamique(){
+            $("#elementDynamique").visibility();
         }
 
 
