@@ -6,8 +6,6 @@
 {
     position: relative;
 }
-
-
 #fond{
     height:100%;
     width: 100%;
@@ -25,9 +23,8 @@
 }
 #obstacle1
 {
-    margin-left: 100%;
+    margin-left: 55%;
     height: 10%;
     width: 5%;
     margin-top: -20%;
-    display: none;
 }
