@@ -25,11 +25,12 @@
                     <div id="instructions"> <!-- Enoncé de la question en cours -->
                         Les instructions ici !
                     </div>
-                    <div class="form-group"> <!-- Block d'envoi  -->
-                        <label for="reponse">Réponse :</label>
-                        <input type="text" class="form-control" id="reponse"> <!-- Champ de réponse -->
+                    <!-- Boutons actions -->
+                    <div id="boutons">
+                        <button type="button" onclick="newInstruction()" class="btn btn-default" id="reponse1">Reponse 1</button>
+                        <button type="button" onclick="newInstruction()" class="btn btn-default" id="reponse2">Reponse 2</button>
+                        <button type="button" onclick="newInstruction()" class="btn btn-default" id="reponse3">Reponse 3</button>
                     </div>
-                    <button type="button" onclick="newInstruction()" class="btn btn-default" id="repondre">Envoyer</button> <!-- Bouton action, envoi la réponse du champ de réponse -->
                 </div>
                 <div id="affichage"> <!-- Block d'affichage -->
                     <img src="" id="fond"/><img src="" id="personnage"/>
