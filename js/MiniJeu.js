@@ -6,6 +6,7 @@
     $(document).ready(function(){
 
         var etapes = 0;
+        var nbPieces = 0 ;
 
         function controleurHistoire(){
             switch(etapes){
@@ -16,6 +17,7 @@
 
                 case 1:
                     saut();
+                    popPiece();
                     etapes++;
                     break;
 
@@ -38,6 +40,7 @@
 
                 case 5:
                     takePiece();
+                    popElementDynamique();
                     etapes=0;
                     break;
             }
@@ -65,7 +68,7 @@
             $("#fond").delay(125).animate({left: "-=10%"}, 750);
         }
 
-        function popNouveauDynamique(){
+        function popElementDynamique(){
             $("#elementDynamique").visibility();
         }
 
