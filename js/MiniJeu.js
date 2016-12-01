@@ -25,8 +25,23 @@ function newInstruction() {
     }
 }
 
-(function($) {
-    $("#fond").click(function () {
+function bouger() {
+
+}
+
+
+$(document).ready(function(){
+
+    function bougerMapGauche(){
         $("#fond").animate({left: '5%'}, 100);
-    })
+    }
+
+    function bougerMapDroite(){
+        $("#fond").animate({right: '5%'}, 100);
+    }
+
+    function bougerBonhomme() {
+        $("#personnage").animate({top:''})
+    }
+
 })(jQuery);
