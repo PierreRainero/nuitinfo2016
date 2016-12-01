@@ -10,13 +10,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script type="application/javascript" src="js/MiniJeu.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/GlobalCSS.css">
     <title>Mini-Jeux</title>
 </head>
-    <body onload="init()">
+    <body>
         <header>
 
         </header>
-        <div class="container theme-showcase" role="main">
+        <div>
             <div id="jeu">
                 <div id="commandes"> <!-- Block d'échange avec le moteur -->
                     <div id="notifications"> <!-- Pourquoi il a fait faux à la question précédente -->
@@ -29,7 +30,7 @@
                         <label for="reponse">Réponse :</label>
                         <input type="text" class="form-control" id="reponse"> <!-- Champ de réponse -->
                     </div>
-                    <button type="button" onclick="newInstruction()" class="btn btn-default" id="repondre">Envoyer</button> <!-- Bouton action, envoi la réponse du champ de réponse -->
+                    <button type="button" class="btn btn-default" id="repondre">Envoyer</button> <!-- Bouton action, envoi la réponse du champ de réponse -->
                 </div>
                 <div id="affichage"> <!-- Block d'affichage -->
                     <img src="img/chipper.png" id="fond"/>

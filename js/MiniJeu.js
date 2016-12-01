@@ -2,46 +2,56 @@
  * Created by PierreRainero on 01/12/2016.
  */
 
-var perso = new Object();
-perso.xDecalage = 0;
-perso.yDecalage = 0;
+(function($) {
+    $(document).ready(function(){
 
-function init(){
+        var perso = new Object();
+        perso.xDecalage = 0;
+        perso.yDecalage = 0;
 
-}
+        function init(){
 
-function sautX(){
+        }
 
-}
+        function sautX(){
 
-
-var Instructions = ["instru1", "instru2", "instru3"];
-var i=0, l=Instructions.length;
-
-function newInstruction() {
-    if (i < Instructions.length) {
-        document.getElementById("instructions").innerHTML = Instructions[i];
-        i++;
-    }
-}
-
-function bouger() {
-
-}
+        }
 
 
-$(document).ready(function(){
+        var Instructions = ["instru1", "instru2", "instru3"];
+        var i=0, l=Instructions.length;
 
-    function bougerMapGauche(){
-        $("#fond").animate({left: '5%'}, 100);
-    }
+        $("#repondre").click(function () {
+            if (i < Instructions.length) {
+                document.getElementById("instructions").innerHTML = Instructions[i];
+                bougerMapDroite();
+                i++;
+            }
+        })
 
-    function bougerMapDroite(){
-        $("#fond").animate({right: '5%'}, 100);
-    }
+        $("#fond").click(function () {
+            bougerMapGauche();
+        })
+        /*
+        function newInstruction() {
+            if (i < Instructions.length) {
+                document.getElementById("instructions").innerHTML = Instructions[i];
+                bougerMapGauche();
+                i++;
+            }
+        }*/
 
-    function bougerBonhomme() {
-        $("#personnage").animate({top:''})
-    }
+        function bougerMapGauche(){
+            $("#fond").animate({"left": "-=500px"}, "slow");
+        }
 
+        function bougerMapDroite() {
+            $("#fond").animate({"right": "-=500px"}, "slow");
+        }
+
+        function bougerBonhomme() {
+            $("#personnage").animate({top:'5%'}, 100);
+
+        }
+    });
 })(jQuery);
