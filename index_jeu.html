@@ -17,17 +17,21 @@
         </header>
         <div class="container theme-showcase" role="main">
             <div id="jeu">
-                <div id="commandes">
-                    <div id="instructions">
+                <div id="commandes"> <!-- Block d'échange avec le moteur -->
+                    <div id="notifications"> <!-- Pourquoi il a fait faux à la question précédente -->
+
+                    </div>
+                    <div id="instructions"> <!-- Enoncé de la question en cours -->
                         Les instructions ici !
                     </div>
-                    <div class="form-group">
+                    <div class="form-group"> <!-- Block d'envoi  -->
                         <label for="reponse">Réponse :</label>
-                        <input type="text" class="form-control" id="reponse">
+                        <input type="text" class="form-control" id="reponse"> <!-- Champ de réponse -->
                     </div>
+                    <button type="button" class="btn btn-default" id="repondre">Envoyer</button> <!-- Bouton action, envoi la réponse du champ de réponse -->
                 </div>
-                <div id="affichage">
-
+                <div id="affichage"> <!-- Block d'affichage -->
+                    <img src="" id="fond"/><img src="" id="personnage"/>
                 </div>
             </div>
         </div>
