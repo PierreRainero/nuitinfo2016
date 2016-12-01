@@ -4,10 +4,12 @@
 
 (function($) {
     $(document).ready(function(){
+        $("#obstacle1").hide();
 
         var perso = new Object();
         perso.xDecalage = 0;
         perso.yDecalage = 0;
+        var deplacementObstacle=0;
 
         function init(){
 
@@ -23,6 +25,7 @@
 
         $("#reponse1").click(function () {
             saut();
+            popNouveauDynamique();
             if (i < Instructions.length) {
                 document.getElementById("instructions").innerHTML = Instructions[i];
                 i++;
@@ -40,7 +43,11 @@
         }
 
         function popNouveauDynamique(){
-            $("#elementDynamique").visibility();
+            if(deplacementObstacle==0)
+                $("#obstacle1").show();
+            else
+                $("#obstacle1").delay(125).animate({left: "-=10%"}, 750);
+            deplacementObstacle++;
         }
 
 
