@@ -13,3 +13,14 @@ function init(){
 function sautX(){
 
 }
+
+
+var Instructions = ["instru1", "instru2", "instru3"];
+var i=0, l=Instructions.length;
+
+function newInstruction() {
+    if (i < Instructions.length) {
+        document.getElementById("instructions").innerHTML = Instructions[i];
+        i++;
+    }
+}
