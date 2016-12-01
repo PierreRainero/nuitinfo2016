@@ -1,5 +1,5 @@
 /**
- * Created by The walking code on 01/12/2016.
+ * Created by PierreRainero on 01/12/2016.
  */
 
 var perso = new Object();
@@ -24,3 +24,9 @@ function newInstruction() {
         i++;
     }
 }
+
+(function($) {
+    $("#fond").click(function () {
+        $("#fond").animate({left: '5%'}, 100);
+    })
+})(jQuery);
