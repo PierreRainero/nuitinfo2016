@@ -117,7 +117,6 @@
                     etapes=0;
                     break;
             }
-            var interval= setInterval(function(){ animationEnded = false; clearInterval(interval); }, 1500);
         }
 
         function initQuestion(){
@@ -148,10 +147,12 @@
         function rightAnswer(){
             controleurHistoire();
             nextQuestion();
+            var interval= setInterval(function(){ animationEnded = false; clearInterval(interval); }, 1000);
         }
 
         function wrongAnswer(){
             nextQuestion();
+            var interval= setInterval(function(){ animationEnded = false; clearInterval(interval); }, 1000);
         }
 
         function endTest(){
@@ -167,15 +168,24 @@
         var i=0, l=Instructions.length;
 
         $("#reponse1").click(function () {
-            checkAnswer("reponse1");
+            if(!animationEnded) {
+                animationEnded=true;
+                checkAnswer("reponse1");
+            }
         })
 
         $("#reponse2").click(function () {
-            checkAnswer("reponse2");
+            if(!animationEnded) {
+                animationEnded=true;
+                checkAnswer("reponse2");
+            }
         })
 
         $("#reponse3").click(function () {
-            checkAnswer("reponse3");
+            if(!animationEnded) {
+                animationEnded=true;
+                checkAnswer("reponse3");
+            }
         })
 
         function defiler(){
