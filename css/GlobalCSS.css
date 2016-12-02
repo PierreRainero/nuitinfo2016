@@ -2,13 +2,23 @@
 {
     position: absolute;
 }
-#fond
+#fond, #fond2
 {
     position: relative;
+    z-index : 1;
 }
-#fond{
+#fond2
+{
+    margin-left: -0.5%;
+}
+#fond,#fond2
+{
     height:100%;
     width: 100%;
+}
+#background{
+    text-align:center;
+    white-space:nowrap;
 
 }
 #personnage
@@ -16,15 +26,19 @@
     height: 10%;
     width: 5%;
     margin-top: -20%;
+    z-index : 100;
 }
-#fond{
+#fond, #fond2
+{
     width: 100%;
     height: 100%;
 }
+
 #obstacle1, #piece
 {
     margin-left: 45%;
     height: 10%;
     width: 5%;
     margin-top: -20%;
+    z-index : 100;
 }
