@@ -33,3 +33,7 @@ body {
 #connexion-dropdown input{
     margin-bottom: 5px;
 }
+
+.actual-page{
+    color: #ffffff !important;
+}
