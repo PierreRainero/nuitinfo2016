@@ -42,7 +42,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.php">Accueil</a>
+            <a class="navbar-brand actual-page" href="index.php">Accueil</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -73,7 +73,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="">Forum</a>
+                    <a href="forumAccueil.php">Forum</a>
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
