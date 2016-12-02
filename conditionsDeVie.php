@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>[Nom du site]</title>
+    <title>SafeZone</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -76,22 +76,6 @@
                     <a href="forumAccueil.php">Forum</a>
                 </li>
             </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Connexion</a>
-                    <ul class="dropdown-menu" id="connexion-dropdown">
-                        <li>
-                            <input type="text" class="form-control" placeholder="Nom d'utilisateur" aria-describedby="basic-addon1">
-                        </li>
-                        <li>
-                            <input type="password" class="form-control" placeholder="Mot de passe" aria-describedby="basic-addon1">
-                        </li>
-                        <li>
-                            <button class="btn">Se connecter</button>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
         </div>
         <!-- /.navbar-collapse -->
     </div>
@@ -100,7 +84,10 @@
 
 <div class="container">
     <div class="row">
-
+        <div class="col-md-6 col-sm-12 text-container">
+            <h1>Leur conditions de vie en France</h1>
+            <p>En France, des mesures sont prises pour aider les migrants à s'intégrer. Il existe des centres d’accueil et d’orientation pour les acceuillir, mais des camps de migrants persistent : tous ne peuvent / veulent aller dans ces camps. Au niveau de la population, encore aujourd'hui beaucoup de personnes ne sont pas "favorables" à l'acceuil de ceux-ci, certaines ayant même peur des migrants alors qu'ils cherchent juste à echapper à la guerre.</p>
+        </div>
     </div>
     <!-- /.row -->
 </div>

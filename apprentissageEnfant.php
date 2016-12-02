@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="The walking code">
 
-    <title>[Nom du site]</title>
+    <title>SafeZone</title>
 
 
     <!-- Mini jeu - IMPORTS -->
@@ -83,22 +83,6 @@
                 </li>
                 <li>
                     <a href="forumAccueil.php">Forum</a>
-                </li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Connexion</a>
-                    <ul class="dropdown-menu" id="connexion-dropdown">
-                        <li>
-                            <input type="text" class="form-control" placeholder="Nom d'utilisateur" aria-describedby="basic-addon1">
-                        </li>
-                        <li>
-                            <input type="password" class="form-control" placeholder="Mot de passe" aria-describedby="basic-addon1">
-                        </li>
-                        <li>
-                            <button class="btn">Se connecter</button>
-                        </li>
-                    </ul>
                 </li>
             </ul>
         </div>
