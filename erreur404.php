@@ -85,8 +85,29 @@
 <div class="container">
     <div class="row">
         <div id="404error">
-            <h1>404</h1>
-            <h3>Ooooops ! Mauvais chemin !</h3>
+            Population mondiale : <div id = "pop"></div>
+            <br><br>
+            Nombre de migrants dans le monde cette année : <div id="migrants"></div>
+            <br><br>
+            Nombre de migrants dans le monde depuis que vous êtes sur cette page : <div id="migrants_realTime"></div>
+
+            </body>
+            <script>
+                var date_arrivée = Math.round(new Date().getTime()/1000);
+                setInterval(function(){
+                    var tmp = Math.round(new Date('2016-01-01 00:00:00').getTime()/1000);
+                    var auj = Math.round(new Date().getTime()/1000);
+                    var diff = auj - tmp;
+                    var tempsSurSite = auj-date_arrivée;
+                    document.getElementById("migrants").innerHTML = new Intl.NumberFormat().format(diff*8);
+                    document.getElementById("migrants_realTime").innerHTML = new Intl.NumberFormat().format(tempsSurSite*8);
+                },1000);
+            </script>
+            <script>
+                $.getJSON('http://www.worldometers.info/fr/population-mondiale/', function(data) {
+                    console.log(data);
+                });
+            </script>
         </div>
     </div>
     <!-- /.row -->
