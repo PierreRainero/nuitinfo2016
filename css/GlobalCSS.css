@@ -12,19 +12,31 @@
 }
 #fond2
 {
-    margin-left: -0.5%;
+    margin-left: +99.9%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
 }
 #fond3
 {
-    margin-left: -0.5%;
+    margin-left: +199.8%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
 }
 #fond4
 {
-    margin-left: -0.5%;
+    margin-left: +299.7%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
 }
 #fond5
 {
-    margin-left: -0.5%;
+    margin-left: +399.6%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
 }
 #background
 {

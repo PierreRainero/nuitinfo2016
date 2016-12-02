@@ -127,6 +127,10 @@
             <div id="affichage"> <!-- Block d'affichage -->
                 <div id="background">
                     <img class="img-responsive" src="img/gameBackground.jpg" id="fond"/>
+                    <img class="img-responsive" src="img/gameBackground.jpg" id="fond2"/>
+                    <img class="img-responsive" src="img/gameBackground.jpg" id="fond3"/>
+                    <img class="img-responsive" src="img/gameBackground.jpg" id="fond4"/>
+                    <img class="img-responsive" src="img/gameBackground.jpg" id="fond5"/>
                 </div>
 
                 <img src="img/coin.png" id="piece"/>
