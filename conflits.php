@@ -10,7 +10,7 @@
     <meta name="author" content="">
 
     <title>SafeZone</title>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -26,6 +26,7 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script type="application/javascript" src="js/easterEgg.js"></script>
 
 </head>
 
@@ -87,6 +88,28 @@
         <div class="col-md-6 col-sm-12 text-container">
             <h1>Les conflits et persécutions dans leur pays</h1>
             <p>De plus en plus de personnes quittent leur pays dans l’espoir de trouver de meilleures conditions de vie. Ils se dirigent dans un premier temps vers des pays limitrophes, leur accordant des conditions de protection temporairement acceptables. Etant donné que la sittuation de leur pays ne s'améliore pas et ne tend pas à s'améliorer, il n'y retournent plus. Dans le but de se reconstruire et démarer une nouvelle vie, ils demandent l'asile au coeur de l'union européene.</p>
+        </div>
+    </div>
+
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" id="esaterEgg" data-target="#modalegg" style="display: none;">Open Modal</button>
+
+    <div id="modalegg" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Surprise !</h4>
+                </div>
+                <div class="modal-body">
+                    <img class="img-responsive" src='img/team.jpg' />
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                </div>
+            </div>
+
         </div>
     </div>
     <!-- /.row -->

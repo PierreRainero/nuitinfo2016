@@ -10,7 +10,7 @@
     <meta name="author" content="">
 
     <title>SafeZone</title>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -26,6 +26,7 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script type="application/javascript" src="js/easterEgg.js"></script>
 
 </head>
 
@@ -99,6 +100,28 @@
         <div class="col-xs-6 col-sm-6 text-container">
             <a href="http://www.msf.fr/" target="_blank" style="text-align: justify; color: #000000; text-decoration: none;"><h1 style="color:#ffffff;">Medecins sans frontières</h1>
                 <p><img class="img-responsive" src="img/msf.png" style="float : left; padding:2%;"/>MSF peut aussi apporter des secours matériels, nutritionnels et sanitaires pour améliorer les conditions de vie de personnes affectées par une crise : distribution d’abris et de matériel de premier secours, distributions de nourriture, ou approvisionnement en eau potable.</p></a>
+        </div>
+    </div>
+
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" id="esaterEgg" data-target="#modalegg" style="display: none;">Open Modal</button>
+
+    <div id="modalegg" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Surprise !</h4>
+                </div>
+                <div class="modal-body">
+                    <img class="img-responsive" src='img/team.jpg' />
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                </div>
+            </div>
+
         </div>
     </div>
     <!-- /.row -->

@@ -35,6 +35,7 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script type="application/javascript" src="js/easterEgg.js"></script>
 
 </head>
 
@@ -57,7 +58,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pourquoi ce site ? <b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="pourquoi">Pourquoi ce site ? <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li>
                             <a href="conflits.php">Les conflits et persécutions dans leur pays</a>
@@ -145,6 +146,28 @@
 
             </div>
         </div>
+
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" id="esaterEgg" data-target="#modalegg" style="display: none;">Open Modal</button>
+
+    <div id="modalegg" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Surprise !</h4>
+                </div>
+                <div class="modal-body">
+                    <img class="img-responsive" src='img/team.jpg' />
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
 
 <!-- Script to Activate the Carousel -->
 <script>
