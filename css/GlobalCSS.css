@@ -40,7 +40,7 @@
 {
     height: 10%;
     width: 5%;
-    margin-top: -25%;
+    margin-top: -16.5%;
     z-index : 100;
 }
 #background
@@ -54,6 +54,22 @@
     margin-left: 45%;
     height: 10%;
     width: 5%;
-    margin-top: -25%;
+    margin-top:  -16.5%;
     z-index : 100;
+}
+
+#commandes {
+    text-align: center;
+}
+
+#instructions {
+    font-weight: bold;
+}
+
+
+
+.groupeMiniJeu {
+    overflow: hidden;
+    margin-left: 2%;
+    margin-right: 2%;
 }
