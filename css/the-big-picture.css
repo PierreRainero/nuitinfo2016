@@ -26,6 +26,14 @@ body {
     background-size: cover;
 }
 
+.full_back4 {
+    background: url("../img/back_4.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 .full_condition{
     background: url("../img/back_3.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
