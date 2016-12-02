@@ -57,3 +57,19 @@
     margin-top: -25%;
     z-index : 100;
 }
+
+#commandes {
+    text-align: center;
+}
+
+#instructions {
+    font-weight: bold;
+}
+
+
+
+.groupeMiniJeu {
+    overflow: hidden;
+    margin-left: 2%;
+    margin-right: 2%;
+}

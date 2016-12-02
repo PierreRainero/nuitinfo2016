@@ -20,7 +20,6 @@
     <script type="application/javascript" src="js/MiniJeu.js"></script>
     <link rel="stylesheet" type="text/css" href="css/GlobalCSS.css">
 
-
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -107,27 +106,24 @@
     </div>
     <!-- /.container -->
 </nav>
-
-<div class="container">
-    <div class="row">
-        <div class="well">
-                <div id="commandes"> <!-- Block d'échange avec le moteur -->
-                    <div id="notifications"> <!-- Pourquoi il a fait faux à la question précédente -->
-
-                    </div>
-                    <div id="instructions"> <!-- Enoncé de la question en cours -->
-
-                    </div>
-                    <!-- Boutons actions -->
-                    <div id="boutons">
-                        <button type="button" class="btn btn-default" id="reponse1"></button>
-                        <button type="button" class="btn btn-default" id="reponse2"></button>
-                        <button type="button" class="btn btn-default" id="reponse3"></button>
-                    </div>
+        <div class="well groupeMiniJeu" style="float: right;width: 25%;">
+            <div id="commandes"> <!-- Block d'échange avec le moteur -->
+                <div id="notifications" > <!-- Pourquoi il a fait faux à la question précédente -->
 
                 </div>
+                <div id="instructions"> <!-- Enoncé de la question en cours -->
+
+                </div>
+                <!-- Boutons actions -->
+                <div id="boutons">
+                    <button type="button" class="btn btn-default" id="reponse1"></button>
+                    <button type="button" class="btn btn-default" id="reponse2"></button>
+                    <button type="button" class="btn btn-default" id="reponse3"></button>
+                </div>
+
+            </div>
         </div>
-        <div class="well">
+        <div class="well groupeMiniJeu" style="width: 65%;">
             <div id="affichage"> <!-- Block d'affichage -->
                 <div id="background">
                     <img src="img/gameBackground.jpg" id="fond"/>
@@ -161,9 +157,6 @@
 
             </div>
         </div>
-    </div>
-    <!-- /.row -->
-</div>
 
 <!-- Script to Activate the Carousel -->
 <script>

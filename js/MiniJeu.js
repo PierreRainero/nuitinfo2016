@@ -260,12 +260,16 @@
         function rightAnswer(){
             controleurHistoire();
             document.getElementById("notifications").innerHTML = "";
+            document.getElementById("notifications").classList.remove("alert");
+            document.getElementById("notifications").classList.remove("alert-danger");
             nextQuestion();
            // var interval= setInterval(function(){ animationEnded = false; clearInterval(interval); }, 1500);
         }
 
         function wrongAnswer(){
             document.getElementById("notifications").innerHTML = questions[qCounter].explication;
+            document.getElementById("notifications").classList.add("alert");
+            document.getElementById("notifications").classList.add("alert-danger");
             nextQuestion();
          //   var interval= setInterval(function(){ animationEnded = false; clearInterval(interval); }, 1500);
         }
