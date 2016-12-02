@@ -57,6 +57,48 @@
             question: "Le chocolat est _____",
             choices: ["marron", "jaune", "bleu"],
             correctAnswer: "marron"
+        }, {
+            question: "",
+            choices: ["océan", "fleuve", "rivière"],
+            explication : "fleuve se dit , rivière se dit ",
+            correctAnswer: "océan"
+        }, {
+            question: "",
+            choices: ["rouge", "vert", "violet"],
+            explication : "rouge se dit ,vert se dit ",
+            correctAnswer: "violet"
+        }, {
+            question: "",
+            choices: ["", "", ""],
+            correctAnswer: ""
+        }, {
+            question: "",
+            choices: ["", "", ""],
+            correctAnswer: ""
+        }, {
+            question: "",
+            choices: ["", "", ""],
+            correctAnswer: ""
+        }, {
+            question: "",
+            choices: ["", "", ""],
+            correctAnswer: ""
+        }, {
+            question: "",
+            choices: ["", "", ""],
+            correctAnswer: ""
+        }, {
+            question: "",
+            choices: ["", "", ""],
+            correctAnswer: ""
+        }, {
+            question: "",
+            choices: ["", "", ""],
+            correctAnswer: ""
+        }, {
+            question: "",
+            choices: ["", "", ""],
+            correctAnswer: ""
         }];
 
         var nbQuestion = questions.length;
