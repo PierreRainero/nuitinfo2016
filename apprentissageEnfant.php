@@ -106,7 +106,23 @@
     </div>
     <!-- /.container -->
 </nav>
-        <div class="well groupeMiniJeu" style="float: right;width: 25%;">
+        <div class="well groupeMiniJeu col-xs-11 col-md-8">
+            <div id="affichage"> <!-- Block d'affichage -->
+                <div id="background">
+                    <img class="img-responsive" src="img/gameBackground.jpg" id="fond"/>
+                    <img class="img-responsive" src="img/gameBackground.jpg" id="fond2"/>
+                    <img class="img-responsive" src="img/gameBackground.jpg" id="fond3"/>
+                    <img class="img-responsive" src="img/gameBackground.jpg" id="fond4"/>
+                    <img class="img-responsive" src="img/gameBackground.jpg" id="fond5"/>
+                </div>
+
+                <img class="img-responsive" src="img/coin.png" id="piece"/>
+                <img class="img-responsive" src="img/fence.png" id="obstacle1"/>
+                <img class="img-responsive" src="img/character.png" id="personnage"/>
+            </div>
+        </div>
+
+        <div class="well groupeMiniJeu col-xs-11 col-md-3">
             <div id="commandes"> <!-- Block d'échange avec le moteur -->
                 <div id="notifications" > <!-- Pourquoi il a fait faux à la question précédente -->
 
@@ -121,21 +137,6 @@
                     <button type="button" class="btn btn-default" id="reponse3"></button>
                 </div>
 
-            </div>
-        </div>
-        <div class="well groupeMiniJeu" style="width: 65%;">
-            <div id="affichage"> <!-- Block d'affichage -->
-                <div id="background">
-                    <img class="img-responsive" src="img/gameBackground.jpg" id="fond"/>
-                    <img class="img-responsive" src="img/gameBackground.jpg" id="fond2"/>
-                    <img class="img-responsive" src="img/gameBackground.jpg" id="fond3"/>
-                    <img class="img-responsive" src="img/gameBackground.jpg" id="fond4"/>
-                    <img class="img-responsive" src="img/gameBackground.jpg" id="fond5"/>
-                </div>
-
-                <img src="img/coin.png" id="piece"/>
-                <img src="img/fence.png" id="obstacle1"/>
-                <img src="img/character.png" id="personnage"/>
             </div>
         </div>
 
