@@ -62,6 +62,8 @@ doctrine:
         auto_generate_proxy_classes: "%kernel.debug%"
         naming_strategy: doctrine.orm.naming_strategy.underscore
         auto_mapping: true
+        resolve_target_entities:
+            Symfony\Component\Security\Core\User\UserInterface: walkingcodeBundle\Entity\User
 
 # Swiftmailer Configuration
 swiftmailer:
@@ -75,3 +77,44 @@ fos_user:
     db_driver: orm # other valid values are 'mongodb' and 'couchdb'
     firewall_name: main
     user_class: walkingcodeBundle\Entity\User
+
+
+
+
+# Stof Doctrine Extensions
+stof_doctrine_extensions:
+    orm:
+        default:
+            sluggable: true
+
+# Configuration for knp paginator: don't forget to customize page_name
+knp_paginator:
+    page_range: 3
+    default_options:
+        page_name: p #todo : customize it
+        sort_field_name: sort
+        sort_direction_name: direction
+        distinct: true
+    template:
+        pagination: KnpPaginatorBundle:Pagination:twitter_bootstrap_v3_pagination.html.twig
+        sortable: KnpPaginatorBundle:Pagination:sortable_link.html.twig
+
+# Configuration for discutea forum
+discutea_forum:
+    preview:
+        enabled: true
+    knp_paginator:
+        page_name: p  #see knp_paginator.default_option.page_name
+        topics:
+            enabled: true
+            per_page: 10
+        posts:
+            enabled: true
+            per_page: 10
+
+assetic:
+    debug:          "%kernel.debug%"
+    use_controller: false
+    bundles:        [walkingcodeBundle, DForumBundle]
+    filters:
+        cssrewrite: ~
