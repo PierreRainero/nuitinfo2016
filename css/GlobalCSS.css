@@ -1,4 +1,30 @@
+#personnage, #obstacle1
+{
+    position: absolute;
+}
 #fond
 {
     position: relative;
+}
+#fond{
+    height:100%;
+    width: 100%;
+
+}
+#personnage
+{
+    height: 10%;
+    width: 5%;
+    margin-top: -20%;
+}
+#fond{
+    width: 100%;
+    height: 100%;
+}
+#obstacle1
+{
+    margin-left: 55%;
+    height: 10%;
+    width: 5%;
+    margin-top: -20%;
 }
