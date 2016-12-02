@@ -36,26 +36,32 @@
         }, {
             question: "Le soleil est _____",
             choices: ["bleu", "jaune", "vert"],
+            explication : "Le soleil (شمس) est jaune (أصفر), et non bleu (أزرق) ou vert (أخضر).",
             correctAnswer: "jaune"
         }, {
             question: "Les _____ sont dans la mer.",
             choices: ["ours", "chats", "poissons"],
+            explication : "Les poissons (سمك) sont dans la mer (بحر), alors que les ours (تحمل) et les chats (القطط) sont sur terre (أرض).",
             correctAnswer: "poissons"
         }, {
             question: "Je mange des _____ avec ma viande.",
             choices: ["légumes", "cailloux", "murs"],
+            explication : "Je ne peux manger (أكل) de murs (الجدران) ou de cailloux (الحصى), mais je peux manger des légumes (خضروات) avec de la viande (لحم).",
             correctAnswer: "légumes"
         }, {
             question: "Mon papa a une _____ rouge.",
             choices: ["jambe", "voiture", "lune"],
+            explication : "Une jambe (ساق) ou une lune (هلال) ne sont pas rouges (أحمر), alors qu'une voiture (سيارة) peut l'être.",
             correctAnswer: "voiture"
         }, {
             question: "Les arbres ont des _____ vertes.",
             choices: ["feuilles", "tuiles", "tables"],
+            explication : "Les arbres (الأشجار) ont des feuilles (أوراق) vertes (أخضر).",
             correctAnswer: "feuilles"
         }, {
             question: "Le chocolat est _____",
             choices: ["marron", "jaune", "bleu"],
+            explication : "Le chocolat (شوكولاتة) est marron (اللون البني) mais pas jaune (أصفر) ou bleau (بلي).",
             correctAnswer: "marron"
         }, {
             question: "",
