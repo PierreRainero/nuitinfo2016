@@ -30,7 +30,7 @@
 
 </head>
 
-<body onload="readJson()">
+<body>
 
 <!-- Navigation -->
 <nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
@@ -101,13 +101,16 @@
             </div>
             <script>
                 var date_arrivée = Math.round(new Date().getTime()/1000);
+                var popMondiale = Math.round(7468307277);
                 setInterval(function(){
                     var tmp = Math.round(new Date('2016-01-01 00:00:00').getTime()/1000);
                     var auj = Math.round(new Date().getTime()/1000);
                     var diff = auj - tmp;
+                    popMondiale = popMondiale+3;
                     var tempsSurSite = auj-date_arrivée;
                     document.getElementById("migrants").innerHTML = new Intl.NumberFormat().format(diff*8);
                     document.getElementById("migrants_realTime").innerHTML = new Intl.NumberFormat().format(tempsSurSite*8);
+                    document.getElementById("pop").innerHTML = Intl.NumberFormat().format(popMondiale);
                 },1000);
             </script>
         </div>
