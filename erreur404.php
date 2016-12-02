@@ -26,10 +26,11 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script type="application/javascript" src="js/exploitationJson.js"></script>
 
 </head>
 
-<body>
+<body onload="readJson()">
 
 <!-- Navigation -->
 <nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
@@ -101,13 +102,19 @@
 <div class="container">
     <div class="row">
         <div id="404error">
-            Population mondiale : <div id = "pop"></div>
-            <br><br>
-            Nombre de migrants dans le monde cette année : <div id="migrants"></div>
-            <br><br>
-            Nombre de migrants dans le monde depuis que vous êtes sur cette page : <div id="migrants_realTime"></div>
+            <div class="jumbotron" style="text-align: center;">
+                <h1><b>404</b><br/>
+                Vous pensez être perdu ?<br/> Que pensez-vous d'eux ?</h1>
+            </div>
 
-            </body>
+            <br/>
+            <div class="jumbotron">
+                <p>Population mondiale : <h2 id = "pop"></h2></p>
+                <br/>
+                <p>Nombre de migrants dans le monde cette année : <h2 id="migrants"></h2></p>
+                <br/>
+                <p>Nombre de migrants dans le monde depuis que vous êtes sur cette page : <h2 id="migrants_realTime"></h2></p>
+            </div>
             <script>
                 var date_arrivée = Math.round(new Date().getTime()/1000);
                 setInterval(function(){
@@ -118,11 +125,6 @@
                     document.getElementById("migrants").innerHTML = new Intl.NumberFormat().format(diff*8);
                     document.getElementById("migrants_realTime").innerHTML = new Intl.NumberFormat().format(tempsSurSite*8);
                 },1000);
-            </script>
-            <script>
-                $.getJSON('http://www.worldometers.info/fr/population-mondiale/', function(data) {
-                    console.log(data);
-                });
             </script>
         </div>
     </div>

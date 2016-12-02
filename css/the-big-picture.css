@@ -19,7 +19,7 @@ body {
  }
 
 .full-404 {
-    background: url("../img/") no-repeat center center fixed;
+    background: url("../img/background404.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
