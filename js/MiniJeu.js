@@ -12,6 +12,8 @@
         var animationEnded=false;
         var qCounter;
         var freeQuestions = [0,1,2,3,4,5,6,7,8,9];
+        var fond=6;
+        var fond2=12;
 
         var questions = [{
             question: "Je vais à l'école en _____.",
@@ -57,6 +59,9 @@
         initQuestion();
 
         function controleurHistoire(){
+            if(fond==0) resetFond();
+            if(fond2==0) resetFond2();
+
             switch(etapes){
                 case 0:
                     defiler();
@@ -147,12 +152,12 @@
         function rightAnswer(){
             controleurHistoire();
             nextQuestion();
-            var interval= setInterval(function(){ animationEnded = false; clearInterval(interval); }, 1000);
+            var interval= setInterval(function(){ animationEnded = false; clearInterval(interval); }, 1500);
         }
 
         function wrongAnswer(){
             nextQuestion();
-            var interval= setInterval(function(){ animationEnded = false; clearInterval(interval); }, 1000);
+            var interval= setInterval(function(){ animationEnded = false; clearInterval(interval); }, 1500);
         }
 
         function endTest(){
@@ -189,13 +194,19 @@
         })
 
         function defiler(){
-            $("#fond").animate({"left": "-=10%"}, 700);
+            $("#fond").animate({"left": "-=15%"}, 750);
+            $("#fond2").animate({"left": "-=15%"}, 750);
+            fond--;
+            fond2--;
         }
 
 
         function saut() {
             $("#personnage").animate({top: "-=20%"}, 750).delay(50).animate({top: "+=20%"}, 750);
-            $("#fond").delay(125).animate({left: "-=10%"}, 750);
+            $("#fond").delay(125).animate({left: "-=15%"}, 750);
+            $("#fond2").delay(125).animate({left: "-=15%"}, 750);
+            fond--;
+            fond2--;
         }
 
         function popElementDynamique(){
@@ -227,6 +238,16 @@
         function takePiece() {
             $("#piece").hide();
             $("#piece").animate({"left": "+=40%"}, 750);
+        }
+
+        function resetFond() {
+            fond=6;
+            $("#fond").animate({"left": "-20%"}, 200);
+        }
+
+        function resetFond2() {
+            fond2=6;
+            $("#fond2").animate({"left": "-20%"}, 200);
         }
 
     });
