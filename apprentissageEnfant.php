@@ -126,8 +126,7 @@
         <div class="well groupeMiniJeu" style="width: 65%;">
             <div id="affichage"> <!-- Block d'affichage -->
                 <div id="background">
-                    <img src="img/gameBackground.jpg" id="fond"/>
-                    <img src="img/gameBackground.jpg" id="fond2"/>
+                    <img class="img-responsive" src="img/gameBackground.jpg" id="fond"/>
                 </div>
 
                 <img src="img/coin.png" id="piece"/>
