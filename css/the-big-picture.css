@@ -26,6 +26,14 @@ body {
     background-size: cover;
 }
 
+.full_condition{
+    background: url("../img/back_3.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 .text-container{
     background-color: rgba( 150, 150, 150, 0.8);
     border-radius: 5px;
