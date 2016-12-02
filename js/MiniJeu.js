@@ -18,41 +18,53 @@
         var questions = [{
             question: "Je vais à l'école en _____.",
             choices: ["vélo", "caillou", "soleil"],
+            explication : "Je peux utiliser un vélo (دراجة هوائية) pour me déplacer et non un caillou (حجر) ou un soleil (شمس).",
             correctAnswer: 'vélo'
         }, {
-            question: "Ma _____ a les cheuveux blonds.",
+            question: "Ma _____ a les cheveux blonds.",
             choices: ["boulangerie", "maman", "bateau"],
+            explication : "La boulangerie (مخبز) ou un bateau (قارب) n'a pas de cheveux (شعر), alors que ma maman (أمي) oui.",
             correctAnswer: "maman"
         }, {
-            question: "Je regarde la _____ souvent.",
-            choices: ["télé", "baignoire", "souris"],
-            correctAnswer: "télé"
+            question: "Je regarde souvent la _____.",
+            choices: ["télévision", "baignoire", "souris"],
+            explication : "Je regarde la télévision (أشاهد التلفاز) et non la baignoire (حمام) ou la souris (فأر)." ,
+            correctAnswer: "télévision"
         }, {
             question: "Mon _____ est Paul.",
             choices: ["chien", "prénom", "papier"],
+            explication : "Mon prénom (الأسم الأول) doit être un nom propre et non un nom commun comme chien (كلب) ou papier (ورقة).",
             correctAnswer: "prénom"
         }, {
             question: "Le soleil est _____",
             choices: ["bleu", "jaune", "vert"],
+            explication : "Le soleil (شمس) est jaune (أصفر), et non bleu (أزرق) ou vert (أخضر).",
             correctAnswer: "jaune"
         }, {
             question: "Les _____ sont dans la mer.",
             choices: ["ours", "chats", "poissons"],
+            explication : "Les poissons (سمك) sont dans la mer (بحر), alors que les ours (تحمل) et les chats (القطط) sont sur terre (أرض).",
             correctAnswer: "poissons"
-        }, {question: " ",
-            choices: ['1', '2', '6'],
-            correctAnswer: '6'
-        }, {question: "Question 7",
-            choices: ['1', '2', '7'],
-            correctAnswer: '7'
         }, {
-            question: "Question 8",
-            choices: ['1', '2', '8'],
-            correctAnswer: '8'
+            question: "Je mange des _____ avec ma viande.",
+            choices: ["légumes", "cailloux", "murs"],
+            explication : "Je ne peux manger (أكل) de murs (الجدران) ou de cailloux (الحصى), mais je peux manger des légumes (خضروات) avec de la viande (لحم).",
+            correctAnswer: "légumes"
         }, {
-            question: "Question 9",
-            choices: ['1', '2', "9"],
-            correctAnswer: "9"
+            question: "Mon papa a une _____ rouge.",
+            choices: ["jambe", "voiture", "lune"],
+            explication : "Une jambe (ساق) ou une lune (هلال) ne sont pas rouges (أحمر), alors qu'une voiture (سيارة) peut l'être.",
+            correctAnswer: "voiture"
+        }, {
+            question: "Les arbres ont des _____ vertes.",
+            choices: ["feuilles", "tuiles", "tables"],
+            explication : "Les arbres (الأشجار) ont des feuilles (أوراق) vertes (أخضر).",
+            correctAnswer: "feuilles"
+        }, {
+            question: "Le chocolat est _____",
+            choices: ["marron", "jaune", "bleu"],
+            explication : "Le chocolat (شوكولاتة) est marron (اللون البني) mais pas jaune (أصفر) ou bleau (بلي).",
+            correctAnswer: "marron"
         }];
 
         var nbQuestion = questions.length;
@@ -151,11 +163,13 @@
 
         function rightAnswer(){
             controleurHistoire();
+            document.getElementById("notifications").innerHTML = "";
             nextQuestion();
             var interval= setInterval(function(){ animationEnded = false; clearInterval(interval); }, 1500);
         }
 
         function wrongAnswer(){
+            document.getElementById("notifications").innerHTML = questions[qCounter].explication;
             nextQuestion();
             var interval= setInterval(function(){ animationEnded = false; clearInterval(interval); }, 1500);
         }
