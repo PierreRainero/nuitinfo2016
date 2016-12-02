@@ -1,0 +1,63 @@
+{% extends "DForumBundle::layout.html.twig" %}
+
+{% block title %}{{ forum.name }}{% endblock %}
+
+{% block body %}
+    <h1 class="text-center">{{ forum.name }} <small>({{ pagination.getTotalItemCount }} topics)</small></h1>
+    <p class="text-center">{{ forum.description }}</p>
+    {{ knp_pagination_render(pagination) }}
+      {% for topic in pagination %}
+        <div class="list-group-item" id="Topic{{ topic.id }}">
+          <div class="row">
+            <div id="content{{ topic.id }}" class="col-md-4 col-xs-12 topic-content">
+              <a href="{{ path('discutea_forum_post', {'slug': topic.slug}) }}">
+                <h2 class="topic-title">{{ topic.title }}</h2>
+                {% if topic.user is not null %}
+                  {% set username = topic.user.username %}
+                {% else %}
+                  {% set username = 'discutea.forum.deleted.user'|trans %}
+                {% endif %}
+                <span class="small">{{ 'discutea.forum.by'|trans }} <strong>{{ username }}</strong>
+                  {{ 'discutea.forum.on'|trans }} {{ topic.date|date("Y-m-d H:i:s") }}
+                </span>
+              </a>
+            </div>
+            <div class="col-md-2 topic-msg-count">
+              {% set posts_count = topic.posts|length %}
+              <p><span class="badge">{{ posts_count }} {% if posts_count > 1 %}{{ 'discutea.forum.posts'|trans }}{% else %}{{ 'discutea.forum.post'|trans }}{% endif %}</span></p>
+              <p>
+                {% if topic.resolved == true %}<br />{{ 'discutea.forum.label.issolved'|trans }}{% endif %}
+                {% if topic.pinned == true %}<br />{{ 'discutea.forum.label.ispinned'|trans }}{% endif %}
+                {% if topic.closed == true %}<br />{{ 'discutea.forum.label.isclosed'|trans }}{% endif %}
+              </p>
+            </div>
+            <div class="col-md-4 col-xs-12">
+              {% if topic.posts.last.poster is not null %}
+                {% set username = topic.posts.last.poster.username %}
+              {% else %}
+                {% set username = 'discutea.forum.deleted.user'|trans %}
+              {% endif %}
+              <a class="lastComment" href="{{ path('discutea_forum_post', {'slug': topic.slug}) }}">
+                <p class="topic-poster">{{ 'discutea.forum.lastpostby'|trans }} <strong>{{ username }}</strong></p>
+                <p class="topic-lastpost-date">{{ topic.posts.last.date|date("Y-m-d H:i:s") }}</p>
+              </a>
+            </div>
+          </div>
+          {% if is_granted('ROLE_MODERATOR') %}  
+            <div class="row admin">
+              <ul class="pull-right list-inline">
+                <li><a id="{{ topic.id }}" class="editAction" href="{{ path("discutea_forum_topic_edit", {'id': topic.id}) }}"><i class="glyphicon glyphicon-edit"></i> {{ 'discutea.forum.edit'|trans }}</a></li>
+                <li><a href="{{ path('discutea_forum_topic_delete', {'id': topic.id}) }}"><i class="glyphicon glyphicon-remove"></i> {{ 'discutea.forum.remove'|trans }}</a></li>  
+              </ul>
+            </div>
+          {% endif %}
+        </div>    
+      {% else %}
+        <div class="list-group-item text-center"><h5>{{ 'discutea.forum.null'|trans }}</h5></div>
+      {% endfor %}
+ 
+
+  {{ knp_pagination_render(pagination) }}
+  
+  {% if form is not null %}{% include 'DForumBundle:Form:Topic.html.twig' %}{% endif %}
+{% endblock %}

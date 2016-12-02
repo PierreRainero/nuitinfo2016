@@ -1,0 +1,34 @@
+{% extends "DForumBundle::layout.html.twig" %}
+
+{% block title %}{{ topic.title }}{% endblock %}
+
+{% block body %}
+  <h1 class="text-center">{{ topic.title }}</h1>
+  {{ knp_pagination_render(posts) }}
+  
+  {% if topic.closed == true %}
+    <div class="alert alert-danger">{{ 'discutea.forum.label.isclosed'|trans }}</div>
+  {% endif %}
+  {% if topic.resolved == true %}
+    <div class="alert alert-success">{{ 'discutea.forum.label.issolved'|trans }}</div>
+  {% endif %}
+  {% if topic.pinned == true %}
+    <div class="alert alert-warning">{{ 'discutea.forum.label.ispinned'|trans }}</div>
+  {% endif %}
+
+  <ul class="list-unstyled">
+    {% for post in posts %}{% include 'DForumBundle::Post/single-post.html.twig' %}{% endfor %}
+    {% if postpreview %}{% include 'DForumBundle::Post/preview-post.html.twig' %}{% endif %}
+    {% if is_granted('CanEditTopic', topic) %}{% include 'DForumBundle::label.html.twig' %}{% endif %}
+  </ul>
+
+  {{ knp_pagination_render(posts) }}
+  
+  {% if form is not null %}
+    <h2>{{ topic.title }}</h2>
+    {% if date(topic.lastpost) < date('-1month') %}
+      <div class="alert alert-danger text-center" role="alert">{{ 'discutea.forum.post.aged'|trans }}</div>
+    {% endif %}
+    {% include 'DForumBundle::Form/Post.html.twig' %}
+  {% endif %}
+{% endblock %}
