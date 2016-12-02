@@ -5,6 +5,7 @@
 #fond
 {
     position: relative;
+    z-index : 1;
 }
 #fond{
     height:100%;
@@ -16,6 +17,7 @@
     height: 10%;
     width: 5%;
     margin-top: -20%;
+    z-index : 100;
 }
 #fond{
     width: 100%;
@@ -27,4 +29,5 @@
     height: 10%;
     width: 5%;
     margin-top: -20%;
+    z-index : 100;
 }
