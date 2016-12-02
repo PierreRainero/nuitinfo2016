@@ -84,7 +84,22 @@
 
 <div class="container">
     <div class="row">
-
+        <div class="col-xs-5 col-sm-5 text-container">
+            <a href="https://api-site.paris.fr/images/77130" target="_blank"><h1 style="color:#ffffff;">Solidarité à Paris</h1>
+            <p><img class="img-responsive" src="img/solidarite_paris.png" style="float : left;" /></p></a>
+        </div>
+        <div class="col-xs-6 col-sm-6 text-container">
+            <a href="https://www.facebook.com/LAuberge-des-Migrants-358496450338/?fref=ts" target="_blank"><h1 style="color:#ffffff;">L'auberge des migrants</h1>
+            <p><img class="img-responsive" src="img/auberge_des_migrants.jpg" style="float : left;" /></p></a>
+        </div>
+        <div class="col-xs-5 col-sm-5 text-container">
+            <a href="http://www.gisti.org/spip.php?page=sommaire" target="_blank"><h1 style="color:#ffffff;">Gisti</h1>
+            <p><img class="img-responsive" src="img/gisti.gif" style="float : left;"/></p></a>
+        </div>
+        <div class="col-xs-6 col-sm-6 text-container">
+            <a href="http://www.msf.fr/" target="_blank"><h1 style="color:#ffffff;">Medecins sans frontières</h1>
+                <p><img class="img-responsive" src="img/msf.png" style="float : left;"/></p></a>
+        </div>
     </div>
     <!-- /.row -->
 </div>
