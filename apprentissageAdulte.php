@@ -84,20 +84,20 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-xs-5 col-sm-5 text-container" style="text-align: center;">
-            <a href="https://api-site.paris.fr/images/77130" target="_blank" style="text-align: justify; color: #000000;"><h1 style="color:#ffffff;">Solidarité à Paris</h1>
-            <p><img class="img-responsive" src="img/solidarite_paris.png" style="float : left; padding:2%;" /></p></a>
+        <div class="col-xs-5 col-sm-5 text-container">
+            <a href="https://api-site.paris.fr/images/77130" target="_blank" style="text-align: justify; color: #000000; text-decoration: none;"><h1 style="color:#ffffff;">Solidarité à Paris</h1>
+            <p><img class="img-responsive" src="img/solidarite_paris.png" style="float : left; padding:2%;" />Guide pratique pour s'orienter, trouver des adresses sur Paris, avoir accès à internet, accèder aux soins, se nourir et se réinsérer.</p></a>
         </div>
-        <div class="col-xs-6 col-sm-6 text-container" style="text-align: center;">
-            <a href="https://www.facebook.com/LAuberge-des-Migrants-358496450338/?fref=ts" target="_blank" style="text-align: justify; color: #000000;"><h1 style="color:#ffffff;">L'auberge des migrants</h1>
+        <div class="col-xs-6 col-sm-6 text-container">
+            <a href="https://www.facebook.com/LAuberge-des-Migrants-358496450338/?fref=ts" target="_blank" style="text-align: justify; color: #000000; text-decoration: none;"><h1 style="color:#ffffff;">L'auberge des migrants</h1>
             <p><img class="img-responsive" src="img/auberge_des_migrants.jpg" style="float : left; padding:2%;" />L'auberge des migrants est une association d'assister matériellement (notamment du point de vue alimentaire), moralement et juridiquement, par tous les moyens dont elle dispose, toute personne en difficulté lors de son passage dans le calaisis, et cela gratuitement.</p></a>
         </div>
-        <div class="col-xs-5 col-sm-5 text-container" style="text-align: center;">
-            <a href="http://www.gisti.org/spip.php?page=sommaire" target="_blank" style="text-align: justify; color: #000000;"><h1 style="color:#ffffff;">Gisti</h1>
-            <p><img class="img-responsive" src="img/gisti.gif" style="float : left; padding:2%;"/></p></a>
+        <div class="col-xs-5 col-sm-5 text-container">
+            <a href="http://www.gisti.org/spip.php?page=sommaire" target="_blank" style="text-align: justify; color: #000000; text-decoration: none;"><h1 style="color:#ffffff;">Gisti</h1>
+            <p><img class="img-responsive" src="img/gisti.gif" style="float : left; padding:2%;"/>Le Gisti est né en 1972 de la rencontre entre des travailleurs sociaux, des militants associatifs en contact régulier avec des populations étrangères et des juristes. Cette double approche, à la fois concrète et juridique, fait la principale originalité du groupe.</p></a>
         </div>
-        <div class="col-xs-6 col-sm-6 text-container" style="text-align: center;">
-            <a href="http://www.msf.fr/" target="_blank" style="text-align: justify; color: #000000;"><h1 style="color:#ffffff;">Medecins sans frontières</h1>
+        <div class="col-xs-6 col-sm-6 text-container">
+            <a href="http://www.msf.fr/" target="_blank" style="text-align: justify; color: #000000; text-decoration: none;"><h1 style="color:#ffffff;">Medecins sans frontières</h1>
                 <p><img class="img-responsive" src="img/msf.png" style="float : left; padding:2%;"/>MSF peut aussi apporter des secours matériels, nutritionnels et sanitaires pour améliorer les conditions de vie de personnes affectées par une crise : distribution d’abris et de matériel de premier secours, distributions de nourriture, ou approvisionnement en eau potable.</p></a>
         </div>
     </div>
