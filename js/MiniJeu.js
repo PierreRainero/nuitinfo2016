@@ -11,9 +11,10 @@
         var nbPieces = 0 ;
         var animationEnded=false;
         var qCounter;
-        var freeQuestions = [0,1,2,3,4,5,6,7,8,9];
+        var freeQuestions = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29];
         var fond=6;
         var fond2=12;
+
 
         var questions = [{
             question: "Je vais à l'école en _____.",
@@ -65,6 +66,106 @@
             choices: ["marron", "jaune", "bleu"],
             explication : "Le chocolat (شوكولاتة) est marron (اللون البني) mais pas jaune (أصفر) ou bleau (بلي).",
             correctAnswer: "marron"
+        }, {
+            question: "نهر",
+            choices: ["océan", "pain", "vert"],
+            explication : "pain = خبز, vert = أخضر",
+            correctAnswer: "océan"
+        }, {
+            question: "بنفسجي",
+            choices: ["rouge", "vert", "violet"],
+            explication : "rouge = أحمر,vert = أخضر",
+            correctAnswer: "violet"
+        }, {
+            question: "تاريخ",
+            choices: ["histoire", "pays", "famille"],
+            explication : "pays = بلد, famille = عائلة",
+            correctAnswer: "histoire"
+        }, {
+            question: "طائرة",
+            choices: ["bateau", "avion", "mouche"],
+            explication : "bateau = قارب, mouche = طيران",
+            correctAnswer: "avion"
+        }, {
+            question: "ثمانية",
+            choices: ["sept", "huit", "neuf"],
+            explication : "sept = سبعة, neuf = جديد",
+            correctAnswer: "huit"
+        }, {
+            question: "عظيم",
+            choices: ["petit", "moyen", "grand"],
+            explication : "petit = ضغير, moyen = الوسائل",
+            correctAnswer: "grand"
+        }, {
+            question: "سحابة",
+            choices: ["plante", "noir", "nuage"],
+            explication : "plante = نبتة, noir = أسود",
+            correctAnswer: "nuage"
+        }, {
+            question: "أمي",
+            choices: ["maman", "papa", "tonton"],
+            explication : "papa = أب, tonton = عم",
+            correctAnswer: "maman"
+        }, {
+            question: "نجمة",
+            choices: ["maison", "étoile", "porte"],
+            explication : "maison = منزل, porte = باب",
+            correctAnswer: "étoile"
+        }, {
+            question: "المحل",
+            choices: ["cadeau", "bijoux", "magasin"],
+            explication : "cadeau = هدية, bijoux = مجوهرات",
+            correctAnswer: "magasin"
+        }, {
+            question: "un",
+            choices: ["سبعة", "واحد", "خمسة"],
+            explication : "un = 1",
+            correctAnswer: "واحد"
+        }, {
+            question: "deux",
+            choices: ["إثنان", "أربع", "تسعة"],
+            explication : "deux = 2",
+            correctAnswer: "إثنان"
+        }, {
+            question: "trois",
+            choices: ["واحد", "صفر", "ثلاثة"],
+            explication : "trois = 3",
+            correctAnswer: "ثلاثة"
+        }, {
+            question: "quatre",
+            choices: ["سبعة", "أربع", "صفر"],
+            explication : "quatre = 4",
+            correctAnswer: "أربع"
+        }, {
+            question: "cinq",
+            choices: ["خمسة", "ثلاثة", "أربع"],
+            explication : "cinq = 5",
+            correctAnswer: "خمسة"
+        }, {
+            question: "six",
+            choices: ["ثلاثة", "ستة", "ثلاثة"],
+            explication : "six = 6",
+            correctAnswer: "ستة"
+        }, {
+            question: "sept",
+            choices: ["سبعة", "واحد", "إثنان"],
+            explication : "sept = 7",
+            correctAnswer: "سبعة"
+        }, {
+            question: "huit",
+            choices: ["ستة", "خمسة", "ثمانية"],
+            explication : "huit = 8",
+            correctAnswer: "ثمانية"
+        }, {
+            question: "neuf",
+            choices: ["ثلاثة", "تسعة", "سبعة"],
+            explication : "neuf = 9",
+            correctAnswer: "تسعة"
+        }, {
+            question: "dix",
+            choices: ["عشرة", "إثنان", "واحد"],
+            explication : "dix = 10",
+            correctAnswer: "عشرة"
         }];
 
         var nbQuestion = questions.length;
