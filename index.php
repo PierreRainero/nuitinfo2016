@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>[Nom du site]</title>
+    <title>SafeZone</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -85,7 +85,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-6 col-sm-12 text-container">
-            <h1>[Nom du site]</h1>
+            <h1>SafeZone</h1>
             <p>Suite aux différents conflits et persécutions sévissant dans le monde, le nombre de migrants en Europe et notamment en France n’a cessé de croitre durant les deux dernières décennies, avec un pic notable ces dernières années. Cette affluence soudaine n’ayant pas permis d’organiser un accueil adapté pour ces migrants, beaucoup d’entre eux se retrouvent sans foyer à attendre d’être autorisé à vivre sur le sol Européen. Ce site est destiné à l’aide de ces migrants en leur fournissant un espace d’échange, mais également à informer les visiteurs de la cause de ces migrations et des conditions de vie des migrants en France.</p>
         </div>
     </div>

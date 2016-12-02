@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="The walking code">
 
-    <title>[Nom du site]</title>
+    <title>SafeZone</title>
 
 
     <!-- Mini jeu - IMPORTS -->
