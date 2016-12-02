@@ -12,8 +12,6 @@
         var animationEnded=false;
         var qCounter;
         var freeQuestions = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29];
-        var fond=6;
-        var fond2=12;
 
 
         var questions = [{
@@ -172,9 +170,6 @@
         initQuestion();
 
         function controleurHistoire(){
-            if(fond==0) resetFond();
-            if(fond2==0) resetFond2();
-
             switch(etapes){
                 case 0:
                     defiler();
@@ -314,17 +309,12 @@
         function defiler(){
             $("#fond").animate({"left": "-=15%"}, 750);
             $("#fond2").animate({"left": "-=15%"}, 750);
-            fond--;
-            fond2--;
         }
 
 
         function saut() {
             $("#personnage").animate({top: "-=20%"}, 750).delay(50).animate({top: "+=20%"}, 750);
-            $("#fond").delay(125).animate({left: "-=15%"}, 750);
-            $("#fond2").delay(125).animate({left: "-=15%"}, 750);
-            fond--;
-            fond2--;
+            $("#background").delay(125).animate({left: "-=15%"}, 750);
         }
 
         function popElementDynamique(){
@@ -357,16 +347,6 @@
             $("#piece").hide();
             $("#piece").animate({"left": "+=40%"}, 750);
             nbPieces++;
-        }
-
-        function resetFond() {
-            fond=12;
-            $("#fond").css({left: "+=199.8%"});
-        }
-
-        function resetFond2() {
-            fond2=12;
-            $("#fond2").css({left: "19%"});
         }
 
     });
