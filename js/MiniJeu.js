@@ -255,13 +255,13 @@
         }
 
         function resetFond() {
-            fond=6;
-            $("#fond").animate({"left": "-20%"}, 200);
+            fond=12;
+            $("#fond").css({left: "90%"});
         }
 
         function resetFond2() {
-            fond2=6;
-            $("#fond2").animate({"left": "-20%"}, 200);
+            fond2=12;
+            $("#fond2").css({left: "0%"});
         }
 
     });
