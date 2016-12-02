@@ -12,51 +12,68 @@
         var animationEnded=false;
         var qCounter;
         var freeQuestions = [0,1,2,3,4,5,6,7,8,9];
+        var fond=6;
+        var fond2=12;
 
         var questions = [{
             question: "Je vais à l'école en _____.",
             choices: ["vélo", "caillou", "soleil"],
+            explication : "Je peux utiliser un vélo (دراجة هوائية) pour me déplacer et non un caillou (حجر) ou un soleil (شمس).",
             correctAnswer: 'vélo'
         }, {
-            question: "Ma _____ a les cheuveux blonds.",
+            question: "Ma _____ a les cheveux blonds.",
             choices: ["boulangerie", "maman", "bateau"],
+            explication : "La boulangerie (مخبز) ou un bateau (قارب) n'a pas de cheveux (شعر), alors que ma maman (أمي) oui.",
             correctAnswer: "maman"
         }, {
-            question: "Je regarde la _____ souvent.",
-            choices: ["télé", "baignoire", "souris"],
-            correctAnswer: "télé"
+            question: "Je regarde souvent la _____.",
+            choices: ["télévision", "baignoire", "souris"],
+            explication : "Je regarde la télévision (أشاهد التلفاز) et non la baignoire (حمام) ou la souris (فأر)." ,
+            correctAnswer: "télévision"
         }, {
             question: "Mon _____ est Paul.",
             choices: ["chien", "prénom", "papier"],
+            explication : "Mon prénom (الأسم الأول) doit être un nom propre et non un nom commun comme chien (كلب) ou papier (ورقة).",
             correctAnswer: "prénom"
         }, {
             question: "Le soleil est _____",
             choices: ["bleu", "jaune", "vert"],
+            explication : "Le soleil (شمس) est jaune (أصفر), et non bleu (أزرق) ou vert (أخضر).",
             correctAnswer: "jaune"
         }, {
             question: "Les _____ sont dans la mer.",
             choices: ["ours", "chats", "poissons"],
+            explication : "Les poissons (سمك) sont dans la mer (بحر), alors que les ours (تحمل) et les chats (القطط) sont sur terre (أرض).",
             correctAnswer: "poissons"
-        }, {question: " ",
-            choices: ['1', '2', '6'],
-            correctAnswer: '6'
-        }, {question: "Question 7",
-            choices: ['1', '2', '7'],
-            correctAnswer: '7'
         }, {
-            question: "Question 8",
-            choices: ['1', '2', '8'],
-            correctAnswer: '8'
+            question: "Je mange des _____ avec ma viande.",
+            choices: ["légumes", "cailloux", "murs"],
+            explication : "Je ne peux manger (أكل) de murs (الجدران) ou de cailloux (الحصى), mais je peux manger des légumes (خضروات) avec de la viande (لحم).",
+            correctAnswer: "légumes"
         }, {
-            question: "Question 9",
-            choices: ['1', '2', "9"],
-            correctAnswer: "9"
+            question: "Mon papa a une _____ rouge.",
+            choices: ["jambe", "voiture", "lune"],
+            explication : "Une jambe (ساق) ou une lune (هلال) ne sont pas rouges (أحمر), alors qu'une voiture (سيارة) peut l'être.",
+            correctAnswer: "voiture"
+        }, {
+            question: "Les arbres ont des _____ vertes.",
+            choices: ["feuilles", "tuiles", "tables"],
+            explication : "Les arbres (الأشجار) ont des feuilles (أوراق) vertes (أخضر).",
+            correctAnswer: "feuilles"
+        }, {
+            question: "Le chocolat est _____",
+            choices: ["marron", "jaune", "bleu"],
+            explication : "Le chocolat (شوكولاتة) est marron (اللون البني) mais pas jaune (أصفر) ou bleau (بلي).",
+            correctAnswer: "marron"
         }];
 
         var nbQuestion = questions.length;
         initQuestion();
 
         function controleurHistoire(){
+            if(fond==0) resetFond();
+            if(fond2==0) resetFond2();
+
             switch(etapes){
                 case 0:
                     defiler();
@@ -117,7 +134,6 @@
                     etapes=0;
                     break;
             }
-            var interval= setInterval(function(){ animationEnded = false; clearInterval(interval); }, 1500);
         }
 
         function initQuestion(){
@@ -147,11 +163,15 @@
 
         function rightAnswer(){
             controleurHistoire();
+            document.getElementById("notifications").innerHTML = "";
             nextQuestion();
+            var interval= setInterval(function(){ animationEnded = false; clearInterval(interval); }, 1500);
         }
 
         function wrongAnswer(){
+            document.getElementById("notifications").innerHTML = questions[qCounter].explication;
             nextQuestion();
+            var interval= setInterval(function(){ animationEnded = false; clearInterval(interval); }, 1500);
         }
 
         function endTest(){
@@ -167,25 +187,40 @@
         var i=0, l=Instructions.length;
 
         $("#reponse1").click(function () {
-            checkAnswer("reponse1");
+            if(!animationEnded) {
+                animationEnded=true;
+                checkAnswer("reponse1");
+            }
         })
 
         $("#reponse2").click(function () {
-            checkAnswer("reponse2");
+            if(!animationEnded) {
+                animationEnded=true;
+                checkAnswer("reponse2");
+            }
         })
 
         $("#reponse3").click(function () {
-            checkAnswer("reponse3");
+            if(!animationEnded) {
+                animationEnded=true;
+                checkAnswer("reponse3");
+            }
         })
 
         function defiler(){
-            $("#fond").animate({"left": "-=10%"}, 700);
+            $("#fond").animate({"left": "-=15%"}, 750);
+            $("#fond2").animate({"left": "-=15%"}, 750);
+            fond--;
+            fond2--;
         }
 
 
         function saut() {
             $("#personnage").animate({top: "-=20%"}, 750).delay(50).animate({top: "+=20%"}, 750);
-            $("#fond").delay(125).animate({left: "-=10%"}, 750);
+            $("#fond").delay(125).animate({left: "-=15%"}, 750);
+            $("#fond2").delay(125).animate({left: "-=15%"}, 750);
+            fond--;
+            fond2--;
         }
 
         function popElementDynamique(){
@@ -217,6 +252,16 @@
         function takePiece() {
             $("#piece").hide();
             $("#piece").animate({"left": "+=40%"}, 750);
+        }
+
+        function resetFond() {
+            fond=12;
+            $("#fond").css({left: "90%"});
+        }
+
+        function resetFond2() {
+            fond2=12;
+            $("#fond2").css({left: "0%"});
         }
 
     });
