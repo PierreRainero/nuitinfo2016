@@ -271,7 +271,10 @@
         }
 
         function endTest(){
-            console.log("fini");
+            document.getElementById("contenuModalVictoire").innerHTML = "Vous avez répondu à toutes les questions et obtenu "+nbPieces+" pièces !";
+            var evt = document.createEvent("MouseEvents");
+            evt.initMouseEvent("click", true, true, window,0, 0, 0, 0, 0, false, false, false, false, 0, null);
+            document.getElementById("boutonmagik").dispatchEvent(evt);
         }
 
         function getRandomInt(max) {
@@ -343,6 +346,7 @@
         function takePiece() {
             $("#piece").hide();
             $("#piece").animate({"left": "+=40%"}, 750);
+            nbPieces++;
         }
 
     });
