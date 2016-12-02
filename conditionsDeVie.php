@@ -57,7 +57,7 @@
                             <a href="voyage.php">Le voyage vers l'Europe</a>
                         </li>
                         <li>
-                            <a href="conditionsDeVie.php">Leur conditions de vie en France</a>
+                            <a href="conditionsDeVie.php">Leurs conditions de vie en France</a>
                         </li>
                     </ul>
                 </li>
