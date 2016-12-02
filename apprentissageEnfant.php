@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="The walking code">
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+
 
     <title>SafeZone</title>
 
@@ -67,7 +69,7 @@
                             <a href="voyage.php">Le voyage vers l'Europe</a>
                         </li>
                         <li>
-                            <a href="conditionsDeVie.php">Leur conditions de vie en France</a>
+                            <a href="conditionsDeVie.php">Leurs conditions de vie en France</a>
                         </li>
                     </ul>
                 </li>
