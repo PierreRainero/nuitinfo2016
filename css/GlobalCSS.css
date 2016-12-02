@@ -1,4 +1,4 @@
-#personnage, #obstacle1
+#personnage, #obstacle1, #piece
 {
     position: absolute;
 }
@@ -21,9 +21,9 @@
     width: 100%;
     height: 100%;
 }
-#obstacle1
+#obstacle1, #piece
 {
-    margin-left: 55%;
+    margin-left: 45%;
     height: 10%;
     width: 5%;
     margin-top: -20%;
