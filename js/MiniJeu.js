@@ -16,18 +16,22 @@
         var questions = [{
             question: "Je vais à l'école en _____.",
             choices: ["vélo", "caillou", "soleil"],
+            explication : "Je peux utiliser un vélo (دراجة هوائية) pour me déplacer et non un caillou (حجر) ou un soleil (شمس).",
             correctAnswer: 'vélo'
         }, {
-            question: "Ma _____ a les cheuveux blonds.",
+            question: "Ma _____ a les cheveux blonds.",
             choices: ["boulangerie", "maman", "bateau"],
+            explication : "La boulangerie (مخبز) ou un bateau (قارب) n'a pas de cheveux (شعر), alors que ma maman (أمي) oui.",
             correctAnswer: "maman"
         }, {
-            question: "Je regarde la _____ souvent.",
-            choices: ["télé", "baignoire", "souris"],
-            correctAnswer: "télé"
+            question: "Je regarde souvent la _____.",
+            choices: ["télévision", "baignoire", "souris"],
+            explication : "Je regarde la télévision (أشاهد التلفاز) et non la baignoire (حمام) ou la souris (فأر)." ,
+            correctAnswer: "télévision"
         }, {
             question: "Mon _____ est Paul.",
             choices: ["chien", "prénom", "papier"],
+            explication : "Mon prénom (الأسم الأول) doit être un nom propre et non un nom commun comme chien (كلب) ou papier (ورقة).",
             correctAnswer: "prénom"
         }, {
             question: "Le soleil est _____",
@@ -37,20 +41,22 @@
             question: "Les _____ sont dans la mer.",
             choices: ["ours", "chats", "poissons"],
             correctAnswer: "poissons"
-        }, {question: " ",
-            choices: ['1', '2', '6'],
-            correctAnswer: '6'
-        }, {question: "Question 7",
-            choices: ['1', '2', '7'],
-            correctAnswer: '7'
         }, {
-            question: "Question 8",
-            choices: ['1', '2', '8'],
-            correctAnswer: '8'
+            question: "Je mange des _____ avec ma viande.",
+            choices: ["légumes", "cailloux", "murs"],
+            correctAnswer: "légumes"
         }, {
-            question: "Question 9",
-            choices: ['1', '2', "9"],
-            correctAnswer: "9"
+            question: "Mon papa a une _____ rouge.",
+            choices: ["jambe", "voiture", "lune"],
+            correctAnswer: "voiture"
+        }, {
+            question: "Les arbres ont des _____ vertes.",
+            choices: ["feuilles", "tuiles", "tables"],
+            correctAnswer: "feuilles"
+        }, {
+            question: "Le chocolat est _____",
+            choices: ["marron", "jaune", "bleu"],
+            correctAnswer: "marron"
         }];
 
         var nbQuestion = questions.length;
@@ -147,10 +153,12 @@
 
         function rightAnswer(){
             controleurHistoire();
+            document.getElementById("notifications").innerHTML = "";
             nextQuestion();
         }
 
         function wrongAnswer(){
+            document.getElementById("notifications").innerHTML = questions[qCounter].explication;
             nextQuestion();
         }
 
