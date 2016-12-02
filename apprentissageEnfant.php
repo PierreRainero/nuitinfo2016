@@ -11,6 +11,16 @@
 
     <title>[Nom du site]</title>
 
+
+    <!-- Mini jeu - IMPORTS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script type="application/javascript" src="js/MiniJeu.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/GlobalCSS.css">
+
+
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -26,10 +36,6 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
-    <!-- Mini jeu - IMPORTS -->
-    <script type="application/javascript" src="js/MiniJeu.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/GlobalCSS.css">
 
 </head>
 
@@ -104,16 +110,60 @@
 
 <div class="container">
     <div class="row">
+        <div class="well">
+                <div id="commandes"> <!-- Block d'échange avec le moteur -->
+                    <div id="notifications"> <!-- Pourquoi il a fait faux à la question précédente -->
 
+                    </div>
+                    <div id="instructions"> <!-- Enoncé de la question en cours -->
+
+                    </div>
+                    <!-- Boutons actions -->
+                    <div id="boutons">
+                        <button type="button" class="btn btn-default" id="reponse1"></button>
+                        <button type="button" class="btn btn-default" id="reponse2"></button>
+                        <button type="button" class="btn btn-default" id="reponse3"></button>
+                    </div>
+
+                </div>
+        </div>
+        <div class="well">
+            <div id="affichage"> <!-- Block d'affichage -->
+                <div id="background">
+                    <img src="img/gameBackground.jpg" id="fond"/>
+                    <img src="img/gameBackground.jpg" id="fond2"/>
+                </div>
+
+                <img src="img/coin.png" id="piece"/>
+                <img src="img/fence.png" id="obstacle1"/>
+                <img src="img/character.png" id="personnage"/>
+            </div>
+        </div>
+
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" id="boutonmagik" data-target="#myModal" style="display: none;">Open Modal</button>
+
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Aventure terminée !</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p id="contenuModalVictoire"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </div>
     <!-- /.row -->
 </div>
-
-<!-- jQuery -->
-<script src="js/jquery.js"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
 
 <!-- Script to Activate the Carousel -->
 <script>
