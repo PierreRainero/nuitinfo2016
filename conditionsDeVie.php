@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="full_condition">
+<html lang="en" class="full_6">
 
 <head>
 
