@@ -10,9 +10,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script type="application/javascript" src="js/MiniJeu.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/GlobalCSS.css">
     <title>Mini-Jeux</title>
 </head>
-    <body onload="init()">
+    <body>
         <header>
 
         </header>
@@ -29,12 +30,14 @@
                     <div id="boutons">
                         <button type="button" onclick="newInstruction()" class="btn btn-default" id="reponse1">Reponse 1</button>
                         <button type="button" onclick="newInstruction()" class="btn btn-default" id="reponse2">Reponse 2</button>
-                        <button type="button" onclick="newInstruction()" class="btn btn-default" id="reponse3">Reponse 3</button>
+                        <button type="button" onclick="myMove()" class="btn btn-default" id="reponse3">Reponse 3</button>
                     </div>
+
                 </div>
                 <div id="affichage"> <!-- Block d'affichage -->
-                    <img src="img/chipper.png" id="fond"/>
-                    <img src="" id="personnage"/>
+                    <img src="img/background.jpg" id="fond"/>
+                    <img src="img/titeuf.png" id="personnage"/>
+                    <img src="img/barriere.jpg" id="obstacle1"/>
                 </div>
             </div>
         </div>
