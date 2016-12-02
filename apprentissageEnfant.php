@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="full">
+<html lang="en" class="ful">
 
 <head>
 
