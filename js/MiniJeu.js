@@ -307,8 +307,7 @@
         })
 
         function defiler(){
-            $("#fond").animate({"left": "-=15%"}, 750);
-            $("#fond2").animate({"left": "-=15%"}, 750);
+            $("#background").delay(125).animate({left: "-=15%"}, 750);
         }
 
 
