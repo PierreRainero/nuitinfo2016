@@ -76,22 +76,6 @@
                     <a href="forumAccueil.php">Forum</a>
                 </li>
             </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Connexion</a>
-                    <ul class="dropdown-menu" id="connexion-dropdown">
-                        <li>
-                            <input type="text" class="form-control" placeholder="Nom d'utilisateur" aria-describedby="basic-addon1">
-                        </li>
-                        <li>
-                            <input type="password" class="form-control" placeholder="Mot de passe" aria-describedby="basic-addon1">
-                        </li>
-                        <li>
-                            <button class="btn">Se connecter</button>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
         </div>
         <!-- /.navbar-collapse -->
     </div>
@@ -100,7 +84,10 @@
 
 <div class="container">
     <div class="row">
-
+        <div class="col-md-6 col-sm-12 text-container">
+            <h1>Les conflits et persécutions dans leur pays</h1>
+            <p>De plus en plus de personnes quittent leur pays dans l’espoir de trouver de meilleures conditions de vie. Ils se dirigent dans un premier temps vers des pays limitrophes, leur accordant des conditions de protection temporairement acceptables. Etant donné que la sittuation de leur pays ne s'améliore pas et ne tend pas à s'améliorer, il n'y retournent plus. Dans le but de se reconstruire et démarer une nouvelle vie, ils demandent l'asile au coeur de l'union européene.</p>
+        </div>
     </div>
     <!-- /.row -->
 </div>

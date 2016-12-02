@@ -76,22 +76,6 @@
                     <a href="forumAccueil.php">Forum</a>
                 </li>
             </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Connexion</a>
-                    <ul class="dropdown-menu" id="connexion-dropdown">
-                        <li>
-                            <input type="text" class="form-control" placeholder="Nom d'utilisateur" aria-describedby="basic-addon1">
-                        </li>
-                        <li>
-                            <input type="password" class="form-control" placeholder="Mot de passe" aria-describedby="basic-addon1">
-                        </li>
-                        <li>
-                            <button class="btn">Se connecter</button>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
         </div>
         <!-- /.navbar-collapse -->
     </div>
@@ -100,7 +84,10 @@
 
 <div class="container">
     <div class="row">
-
+        <div class="col-md-6 col-sm-12 text-container">
+            <h1>Le voyage vers l'Europe</h1>
+            <p>Pour rejoindre l'Europe le voyage (qu'il soit maritime ou terrestre) est dangereux. Pour rejoindre l'Europe, le voyage est dangereux. Que ce soit par la voie maritime avec un nombre important de mort chaque jours. Ou encore par la voie terrestre : le trajet est long (risque de blessures, fatigue, ...), ils ne trouvent pas toujours de quoi se nourrir.</p>
+        </div>
     </div>
     <!-- /.row -->
 </div>
