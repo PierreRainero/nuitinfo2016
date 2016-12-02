@@ -266,13 +266,13 @@
             controleurHistoire();
             document.getElementById("notifications").innerHTML = "";
             nextQuestion();
-            var interval= setInterval(function(){ animationEnded = false; clearInterval(interval); }, 1500);
+           // var interval= setInterval(function(){ animationEnded = false; clearInterval(interval); }, 1500);
         }
 
         function wrongAnswer(){
             document.getElementById("notifications").innerHTML = questions[qCounter].explication;
             nextQuestion();
-            var interval= setInterval(function(){ animationEnded = false; clearInterval(interval); }, 1500);
+         //   var interval= setInterval(function(){ animationEnded = false; clearInterval(interval); }, 1500);
         }
 
         function endTest(){
@@ -291,24 +291,24 @@
         var i=0, l=Instructions.length;
 
         $("#reponse1").click(function () {
-            if(!animationEnded) {
-                animationEnded=true;
+            /*if(!animationEnded) {
+                animationEnded=true;*/
                 checkAnswer("reponse1");
-            }
+            //}
         })
 
         $("#reponse2").click(function () {
-            if(!animationEnded) {
-                animationEnded=true;
+           // if(!animationEnded) {
+           //     animationEnded=true;
                 checkAnswer("reponse2");
-            }
+          //  }
         })
 
         $("#reponse3").click(function () {
-            if(!animationEnded) {
-                animationEnded=true;
+           // if(!animationEnded) {
+           //     animationEnded=true;
                 checkAnswer("reponse3");
-            }
+           // }
         })
 
         function defiler(){
