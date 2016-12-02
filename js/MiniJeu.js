@@ -361,12 +361,12 @@
 
         function resetFond() {
             fond=12;
-            $("#fond").css({left: "90%"});
+            $("#fond").css({left: "+=199.8%"});
         }
 
         function resetFond2() {
             fond2=12;
-            $("#fond2").css({left: "0%"});
+            $("#fond2").css({left: "19%"});
         }
 
     });
